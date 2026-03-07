@@ -6,14 +6,17 @@
     <title>Yumurcakistan | Ana Arşiv</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f8f9fa; font-family: 'Georgia', serif; color: #222; }
+        body { background-color: #f8f9fa; font-family: 'Georgia', serif; color: #222; margin: 0; }
         .wiki-header { background: #1a1a1a; color: #d4af37; padding: 40px; text-align: center; border-bottom: 6px solid #d4af37; }
         .sidebar { background: #eee; border-right: 1px solid #ccc; padding: 20px; min-height: 100vh; font-family: sans-serif; }
-        .main-content { padding: 40px; background: white; line-height: 1.8; }
-        .story-title { font-family: 'Times New Roman', serif; border-bottom: 2px solid #333; margin-bottom: 20px; padding-bottom: 10px; color: #1a1a1a; }
-        .nav-link { color: #333; font-weight: bold; }
-        .infobox { background: #fdfdfd; border: 1px solid #ccc; padding: 15px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); }
-        .secret-stamp { color: rgba(255, 0, 0, 0.05); font-size: 6em; position: absolute; transform: rotate(-30deg); z-index: 0; pointer-events: none; }
+        /* Metni genişletmek ve kutusuz düzen için padding ayarı */
+        .main-content { padding: 60px 10%; background: white; line-height: 2; min-height: 100vh; position: relative; }
+        .story-title { font-family: 'Times New Roman', serif; border-bottom: 2px solid #333; margin-bottom: 40px; padding-bottom: 10px; color: #1a1a1a; }
+        .nav-link { color: #333; font-weight: bold; margin-bottom: 5px; }
+        .nav-link:hover, .nav-link.active { color: #d4af37; }
+        .secret-stamp { color: rgba(255, 0, 0, 0.04); font-size: 8em; position: absolute; transform: rotate(-30deg); z-index: 0; pointer-events: none; top: 20%; left: 25%; }
+        .content-wrapper { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+        hr { border-color: #ccc; }
     </style>
 </head>
 <body>
@@ -26,7 +29,7 @@
 <div class="container-fluid">
     <div class="row">
         <nav class="col-md-3 col-lg-2 sidebar">
-            <h5>Gezinti</h5>
+            <h5 class="mt-3">Gezinti</h5>
             <ul class="nav flex-column">
                 <li class="nav-item"><a class="nav-link active" href="index.html">📜 Ana Hikaye</a></li>
                 <hr>
@@ -41,33 +44,21 @@
         <main class="col-md-9 col-lg-10 main-content">
             <div class="secret-stamp">ORİJİNAL KAYIT</div>
             
-            <div class="row">
-                <div class="col-md-8">
-                    <h2 class="story-title">Başlangıç: İlk Fısıltıdan İmparatorluğa</h2>
-                    <p>Dünya henüz isimlerin konulmadığı, kıtaların sadece birer vahşi kara parçası olduğu o kadim dönemde, her şey <strong>Whisperr</strong>’ın karanlık ormanlarında başladı. Kaos hakimdi ve insanlar bir lidere, bir düzene açtı.</p>
-                    
-                    <p><strong>Kurucu</strong>, dağınık haldeki tüm bu güçleri tek bir çatı altında toplama kararı aldığında, tarihin akışı sonsuza dek değişti. İlk olarak Whisperr'ın stratejik zekası ile Academia'nın bilimsel keşifleri birleştirildi. Ardından, Hassams'ın hırçın savaşçıları bu düzene itaat etmeyi öğrendi.</p>
+            <div class="content-wrapper">
+                <h2 class="story-title text-center">Başlangıç: İlk Fısıltıdan İmparatorluğa</h2>
+                
+                <p>Dünya henüz isimlerin konulmadığı, kıtaların sadece birer vahşi kara parçası olduğu o kadim dönemde, her şey <strong>Whisperr</strong>’ın karanlık ormanlarında başladı. Kaos hakimdi ve insanlar bir lidere, bir düzene açtı.</p>
+                
+                <p><strong>Kurucu</strong>, dağınık haldeki tüm bu güçleri tek bir çatı altında toplama kararı aldığında, tarihin akışı sonsuza dek değişti. İlk olarak Whisperr'ın stratejik zekası ile Academia'nın bilimsel keşifleri birleştirildi. Ardından, Hassams'ın hırçın savaşçıları bu düzene itaat etmeyi öğrendi.</p>
 
-                    <h4>Yumurcakistan'ın Yükselişi</h4>
-                    <p>Yumurcakistan, bu birleşmenin sonucunda doğan en büyük güçtür. Bir ülke değil, bir <strong>"Dünya Sistemi"</strong> olarak kurgulandı. Bugün, her kıta bu büyük mekanizmanın bir dişlisi olarak çalışmakta ve Kurucu'nun planına hizmet etmektedir.</p>
+                <h4 class="mt-5">Yumurcakistan'ın Yükselişi</h4>
+                <p>Yumurcakistan, bu birleşmenin sonucunda doğan en büyük güçtür. Bir ülke değil, bir <strong>"Dünya Sistemi"</strong> olarak kurgulandı. Bugün, her kıta bu büyük mekanizmanın bir dişlisi olarak çalışmakta ve Kurucu'nun planına hizmet etmektedir.</p>
 
-                    <blockquote class="blockquote mt-4 p-3 bg-light border-start border-5 border-warning">
-                        <p class="mb-0">"Tarih, sadece Kurucu'nun yazılmasına izin verdiği kadarından ibarettir."</p>
-                    </blockquote>
-                </div>
+                <p>Kıtalar arası ticaret, güvenlik ve bilgi akışı tamamen bu merkezden kontrol edilir. Direnenler zamanla tarihin tozlu sayfalarına gömülmüş, Yumurcakistan bayrağı altında toplananlar ise refah ve disipline kavuşmuştur. Her şey, Kurucu'nun belirlediği o ince çizgide ilerlemektedir.</p>
 
-                <div class="col-md-4">
-                    <div class="infobox text-center">
-                        <h5 style="background: #333; color: white; padding: 5px;">DÜNYA KİMLİĞİ</h5>
-                        <img src="https://via.placeholder.com/200?text=Logo" class="img-fluid my-3">
-                        <table class="table table-sm text-start">
-                            <tr><th>Merkez Kıta:</th><td>Whisperr</td></tr>
-                            <tr><th>Yönetim Şekli:</th><td>Tekil Otorite</td></tr>
-                            <tr><th>Resmi Güç:</th><td>Yumurcakistan</td></tr>
-                            <tr><th>Durum:</th><td>Stabil / Gözlem Altında</td></tr>
-                        </table>
-                    </div>
-                </div>
+                <blockquote class="blockquote mt-5 p-4 bg-light border-start border-5 border-warning text-center">
+                    <p class="mb-0 italic">"Tarih, sadece Kurucu'nun yazılmasına izin verdiği kadarından ibarettir."</p>
+                </blockquote>
             </div>
         </main>
     </div>
