@@ -6,93 +6,86 @@
     <title>HASSAMS | Scorched Earth</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* SCORCHED EARTH ATMOSFERİ */
         body {
-            background-color: #1a0f00; /* Çöl Kahverengisi */
+            background-color: #1a0f00;
             color: #ffcc00;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            overflow-x: hidden;
         }
 
-        /* DEVASA GÜNEŞ VE BAŞLIK ALANI */
+        /* SKYDOCKS TARZI GENİŞ BAŞLIK */
         .scortched-header {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), 
-                        url('https://www.transparenttextures.com/patterns/sandpaper.png');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.transparenttextures.com/patterns/sandpaper.png');
             background-color: #ff8c00;
-            height: 60vh;
+            height: 50vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            border-bottom: 10px solid #331a00;
-            box-shadow: inset 0 0 150px #000;
+            border-bottom: 5px solid #331a00;
         }
 
         .scortched-header h1 {
-            font-size: clamp(4rem, 10vw, 8rem);
+            font-size: 6rem;
             font-weight: 900;
-            color: #fff;
-            text-shadow: 10px 10px 0px #331a00;
             letter-spacing: 20px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .scortched-header p {
-            font-size: 1.5rem;
-            color: #331a00;
-            font-weight: bold;
-            letter-spacing: 4px;
-            margin-top: 10px;
-        }
-
-        /* AKICI BİLGİ METNİ - KUTUSUZ TASARIM */
-        .story-section {
-            max-width: 1000px;
-            margin: 80px auto;
-            padding: 0 30px;
-            line-height: 2.2;
-            font-size: 1.25rem;
-            color: #ffe066;
-            text-align: center;
-        }
-
-        .story-section strong {
             color: #fff;
-            border-bottom: 2px solid #ff4500;
+            text-shadow: 5px 5px 0px #331a00;
         }
 
-        /* DİNOZOR VE KARAKTER GRİDİ (ALT BÖLÜM) */
-        .fauna-grid {
-            background: #000;
-            padding: 100px 0;
-            border-top: 4px solid #ff4500;
+        /* GENİŞ LİSTELEME DÜZENİ (SKYDOCKS STYLE) */
+        .dossier-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
         }
 
-        .dino-card {
-            background: #111;
-            border: 1px solid #333;
-            padding: 30px;
-            transition: 0.4s;
-            height: 100%;
-            border-bottom: 5px solid #ff4500;
+        .dossier-entry {
+            display: flex;
+            align-items: center;
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+            transition: 0.3s;
         }
 
-        .dino-card:hover {
-            transform: scale(1.05);
-            background: #1a1a1a;
-            border-color: #ff8c00;
+        .dossier-entry:hover {
+            background: rgba(255, 140, 0, 0.05);
         }
 
-        .category-tag {
-            color: #ff4500;
+        .dossier-icon {
+            font-size: 4rem;
+            min-width: 120px;
+            text-align: center;
+            filter: drop-shadow(0 0 10px #ff4500);
+        }
+
+        .dossier-content {
+            padding-left: 40px;
+        }
+
+        .dossier-content h3 {
             font-weight: bold;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            display: block;
+            letter-spacing: 3px;
+            text-transform: uppercase;
             margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .dossier-content p {
+            font-size: 1.1rem;
+            color: #ffdb4d;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            background: #ff4500;
+            color: #000;
+            padding: 2px 10px;
+            font-weight: bold;
+            margin-right: 10px;
+            border-radius: 2px;
         }
 
         .nav-btn {
@@ -102,88 +95,66 @@
             color: #fff;
             text-decoration: none;
             font-weight: bold;
-            background: rgba(0,0,0,0.5);
-            padding: 10px 20px;
             border: 1px solid #ff8c00;
+            padding: 8px 20px;
+            background: rgba(0,0,0,0.5);
         }
     </style>
 </head>
 <body>
 
     <header class="scortched-header">
-        <a href="index.html" class="nav-btn">⬅ ANA KARARGAHA DÖN</a>
+        <a href="index.html" class="nav-btn">⬅ ANA KARARGAH</a>
         <h1>HASSAMS</h1>
-        <p>GOTHAM'IN GÖLGESİNDE KAVURUCU BİR DİYAR</p>
+        <p style="letter-spacing: 5px; font-weight: bold;">SCORCHED EARTH & GOTHAM PROTOCOL</p>
     </header>
 
-    <main class="story-section">
-        <p>
-            Hassams Kıtası, <strong>ARK: Scorched Earth</strong>'ün vahşi doğası ile <strong>Gotham</strong>'ın karanlık mimarisinin çarpıştığı noktadır. 
-            Burada sarı kumlar sadece susuzluğu değil, yaklaşan bir ölümü de temsil eder. Dev binaların yıkıntıları kum tepelerinin arasından birer mezar taşı gibi yükselir. 
-            Gündüzleri ısı dalgaları gerçekliği bükerken, geceleri <strong>Mr. Ertuğrul</strong>'un adaleti rüzgarla birlikte fısıldar. 
-            Su, buradaki tek gerçek hazinedir ve her damlası kanla kazanılır. Dinozorlar burada sadece hayvan değil, genetik olarak modifiye edilmiş savaş makineleridir.
-        </p>
-    </main>
-
-    <section class="fauna-grid">
-        <div class="container">
-            <h2 class="text-center mb-5" style="letter-spacing: 12px; color: #ff8c00;">DİJİTAL KAYITLAR</h2>
-            <div class="row g-4">
-                
-                <div class="col-md-4">
-                    <div class="dino-card">
-                        <span class="category-tag">🦇 KORUYUCU</span>
-                        <h3>MR. ERTUĞRUL</h3>
-                        <p class="small text-muted">Gece Celladı. Kum fırtınalarını pelerin olarak kullanan, kılıcıyla adaleti kumun üzerine kazıyan tek lider.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="dino-card">
-                        <span class="category-tag">🦖 ALPHA APEX</span>
-                        <h3>SAND-REX</h3>
-                        <p class="small text-muted">Scorched Earth'ün mutlak hakimi. Titreşimleri kilometrelerce öteden hisseden, kumun altındaki ölüm.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="dino-card">
-                        <span class="category-tag">🐉 FLYER</span>
-                        <h3>GOTHAM WYVERN</h3>
-                        <p class="small text-muted">Ağzından karanlık alevler kusan, devasa kanatlarıyla kum fırtınaları yaratan efsanevi canlı.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="dino-card" style="border-bottom-color: #6f42c1;">
-                        <span class="category-tag">🧪 BİYO-TEHLİKE</span>
-                        <h3>DR. TOXIN</h3>
-                        <p class="small text-muted">Vahşi dinozorları evcilleştiren ve onları birer kimyasal silaha dönüştüren dahi suç baronu.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="dino-card" style="border-bottom-color: #6f42c1;">
-                        <span class="category-tag">🎭 ZİHİN MİMARI</span>
-                        <h3>KUKLACI</h3>
-                        <p class="small text-muted">Arena dövüşçülerinin anılarını çalan ve onları zifiri karanlıkta yöneten gizemli figür.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="dino-card" style="border-bottom-color: #ff0000; background: #200;">
-                        <span class="category-tag">🏟️ ETKİNLİK</span>
-                        <h3>BÜYÜK ARENA</h3>
-                        <p class="small text-muted">Hassams'ın kalbinde, kum ve kanın birbirine karıştığı, sadece en güçlülerin sağ çıktığı yer.</p>
-                    </div>
-                </div>
-
+    <div class="dossier-container">
+        
+        <div class="dossier-entry">
+            <div class="dossier-icon">🦇</div>
+            <div class="dossier-content">
+                <h3><span class="tag">HAKİM</span> MR. ERTUĞRUL</h3>
+                <p>Hassams'ın Gece Celladı. Gotham'ın adalet mirasını kavurucu kumların üzerine taşıyan tek otorite. Pelerini kum fırtınalarıyla dans ederken, elindeki "Kefaret" kılıcıyla hem suçluları hem de kontrolden çıkan dinozorları dize getirir.</p>
             </div>
         </div>
-    </section>
 
-    <footer class="text-center py-5" style="background: #000; color: #444; font-size: 0.8rem;">
-        HASSAMS PROTOCOL // 2026 // ADALET KUMUN ALTINDADIR.
+        <div class="dossier-entry">
+            <div class="dossier-icon">🦖</div>
+            <div class="dossier-content">
+                <h3><span class="tag">ALPHA</span> SAND-REX</h3>
+                <p>Scorched Earth'ün en büyük yırtıcısı. Titreşimleri kilometrelerce öteden hisseden, zırhlı derisi sayesinde güneşin yakıcı etkisinden korunan devasa bir avcı. Kumun altındaki sessiz sarsıntının ana kaynağıdır.</p>
+            </div>
+        </div>
+
+        <div class="dossier-entry">
+            <div class="dossier-icon">🪱</div>
+            <div class="dossier-content">
+                <h3><span class="tag">DEHŞET</span> DÜRÜM CANAVARI (Deathworm)</h3>
+                <p>Ayaklarınızın altındaki gerçek kabus. ARK'ın efsanevi Deathworm türünün Hassams mutasyonu. Saniyeler içinde kumun altından fırlayıp koca bir kervanı tek hamlede yutan, zırhları ve kemikleri bir dürüm gibi saran devasa parazit.</p>
+            </div>
+        </div>
+
+        <div class="dossier-entry">
+            <div class="dossier-icon">🐉</div>
+            <div class="dossier-content">
+                <h3><span class="tag">UÇAN</span> GOTHAM WYVERN</h3>
+                <p>Ağzından karanlık plazma alevleri kusan, devasa yarasa kanatlarına sahip gökyüzü hükümdarı. Kum fırtınalarının üzerinde süzülerek termal görüşüyle avını arar.</p>
+            </div>
+        </div>
+
+        <div class="dossier-entry" style="border-bottom: none;">
+            <div class="dossier-icon">🧪</div>
+            <div class="dossier-content">
+                <h3><span class="tag">SUÇ LORDU</span> DR. TOXIN</h3>
+                <p>Biyolojik kaosun mimarı. Dinozorları modifiye ederek onları birer canlı silaha dönüştüren ve vahalardaki su kaynaklarını zehirleyerek şehri avucunun içine alan dahi zihin.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="text-center py-5" style="color: #444; border-top: 1px solid #222;">
+        HASSAMS // DOSYA NO: 002-SCORCHED // 2026
     </footer>
 
 </body>
