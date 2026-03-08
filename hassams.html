@@ -3,105 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HASSAMS | Mr. Ertuğrul'un Diyarı</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>HASSAMS | Mr. Ertuğrul'un Arşivi</title>
     <style>
-        /* HASSAMS GOTHAM-DESERT TEMASI */
         body {
-            background-color: #0a0a0a;
+            background-color: #050505;
             color: #d1d1d1;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
-        .header-section {
-            background: linear-gradient(180deg, #1a0f00 0%, #000000 100%);
-            padding: 60px 0;
+
+        /* Başlık Alanı */
+        .header {
+            background: linear-gradient(180deg, #1a0f00 0%, #000 100%);
             border-bottom: 3px solid #ff4500;
+            padding: 80px 20px;
             text-align: center;
         }
-        .gotham-title {
+
+        .header h1 {
             color: #ff4500;
-            font-size: 5rem;
-            font-weight: 900;
+            font-size: 4rem;
+            margin: 0;
             letter-spacing: 15px;
             text-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
         }
-        .character-card {
-            background: #151515;
+
+        /* Ana Konteyner */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Kart Yapısı */
+        .card {
+            background: #111;
             border: 1px solid #333;
-            border-left: 5px solid #ff4500;
-            transition: 0.3s;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 6px solid #ff4500;
         }
-        .character-card:hover {
-            background: #1a1a1a;
-            transform: scale(1.02);
+
+        .hero-card {
+            border: 2px solid #ff4500;
+            background: rgba(255, 69, 0, 0.05);
+            text-align: center;
         }
-        .dino-badge {
-            background: #330000;
-            color: #ff4d4d;
-            border: 1px solid #ff4d4d;
-            padding: 5px 10px;
+
+        h2, h3 { color: #fff; text-transform: uppercase; }
+        .highlight { color: #ff4500; font-weight: bold; }
+
+        /* Grid Sistemi */
+        .row { display: flex; flex-wrap: wrap; gap: 20px; }
+        .col { flex: 1; min-width: 300px; }
+
+        /* Dinozor ve Karakter Etiketleri */
+        .badge {
+            background: #300;
+            color: #ff4500;
+            padding: 4px 8px;
             font-size: 0.8rem;
-            border-radius: 5px;
+            border: 1px solid #ff4500;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 50px;
+            color: #444;
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
         }
     </style>
 </head>
 <body>
 
-    <div class="header-section">
-        <h1 class="gotham-title">HASSAMS</h1>
-        <p style="color: #888; letter-spacing: 5px;">YARI ÇÖL // YARI KARANLIK // TAM KAOS</p>
+    <div class="header">
+        <h1>HASSAMS</h1>
+        <p style="color: #666; letter-spacing: 4px;">THE GOTHAM OF THE DEAD SANDS</p>
     </div>
 
-    <div class="container mt-5">
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="character-card text-center" style="border: 2px solid #ff4500;">
-                    <h2 style="color: #fff;">🦇 MR. ERTUĞRUL</h2>
-                    <p class="lead">Hassams'ın Gece Celladı ve Tek Hakimi.</p>
-                    <p>Gotham'ın gölgesini çöle taşıyan efsane. "Kefaret" kılıcıyla adaleti sağlar.</p>
-                </div>
-            </div>
+    <div class="container">
+        
+        <div class="card hero-card">
+            <h2>🦇 MR. ERTUĞRUL: GECE CELLADI</h2>
+            <p>Hassams'ın karanlık sokaklarında adaleti "Kefaret" kılıcıyla dağıtan tek otorite.</p>
+            <div class="badge">SİLAH: KARA ÇELİK</div> <div class="badge">MOD: GÖLGE ADIMI</div>
         </div>
 
         <div class="row">
-            <div class="col-md-6">
-                <h3 style="color: #ff4500; border-bottom: 1px solid #333; padding-bottom: 10px;">🦖 VAHŞİ EKOSİSTEM</h3>
-                <div class="character-card">
-                    <h6>SAND-REX <span class="dino-badge">MUTANT</span></h6>
-                    <p style="font-size: 0.9rem;">Kumun 20 metre altından gelen, zırh delici dişlere sahip devasa T-Rex.</p>
+            <div class="col">
+                <h3>🦖 VAHŞİ DİNO-MUTANTLAR</h3>
+                <div class="card" style="border-left-color: #ff8c00;">
+                    <div class="badge">TEHLİKE: KRİTİK</div>
+                    <p class="highlight">SAND-REX</p>
+                    <p>Kumun altında titreşimle avlanan, zırhlı bir deri ve 2 metrelik dişlere sahip mutasyona uğramış T-Rex.</p>
                 </div>
-                <div class="character-card">
-                    <h6>GOTHAM RAPTOR <span class="dino-badge">HİBRİT</span></h6>
-                    <p style="font-size: 0.9rem;">Yarasa kanatlı, gece görüşü kusursuz, sürü halinde avlanan zeki dinozorlar.</p>
+                <div class="card" style="border-left-color: #ff8c00;">
+                    <div class="badge">TEHLİKE: YÜKSEK</div>
+                    <p class="highlight">GOTHAM RAPTOR</p>
+                    <p>Pterodactyl kanatlarına sahip, gece görüşü kusursuz ve son derece zeki sürü avcıları.</p>
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <h3 style="color: #ff4500; border-bottom: 1px solid #333; padding-bottom: 10px;">👥 GÖLGE KONSEYİ</h3>
-                <div class="character-card" style="border-left-color: #6f42c1;">
-                    <h6>KUKLACI</h6>
-                    <p style="font-size: 0.9rem;">Zihin kontrolü ile Arenadaki dövüşçüleri yöneten gizemli suç baronu.</p>
+            <div class="col">
+                <h3>👥 GÖLGE KONSEYİ</h3>
+                <div class="card" style="border-left-color: #6f42c1;">
+                    <p class="highlight">KUKLACI (Puppet Master)</p>
+                    <p>İAÖ'den firar eden, nöral frekanslarla canlıları köleleştiren zihin mimarı.</p>
                 </div>
-                <div class="character-card" style="border-left-color: #6f42c1;">
-                    <h6>DR. TOXIN</h6>
-                    <p style="font-size: 0.9rem;">Korku gazları ve genetik mutasyonların arkasındaki dahi zihin.</p>
+                <div class="card" style="border-left-color: #6f42c1;">
+                    <p class="highlight">DR. TOXIN</p>
+                    <p>Hassams'ın sarı kumlarını zehirli birer tuzağa dönüştüren kimyasal dahi.</p>
                 </div>
             </div>
         </div>
 
-        <div class="mt-5 p-5 text-center" style="background: #200; border: 2px dashed #f00;">
-            <h2 style="color: #f00;">THE GRAND ARENA</h2>
-            <p>Kumun üzerinde sadece bir kazanan kalır.</p>
+        <div class="card" style="text-align: center; border: 2px dashed #ff0000; background: #1a0000;">
+            <h2 style="color: #ff0000;">🏟️ THE GRAND ARENA</h2>
+            <p>"Burada sadece kum ve kan gerçektir."</p>
+            <p style="font-size: 0.8rem; color: #888;">Giriş için Mr. Ertuğrul'un onayı bekleniyor...</p>
         </div>
+
     </div>
 
-    <footer class="text-center py-5 text-muted">
-        HASSAMS ARŞİVİ - 2026
-    </footer>
+    <div class="footer">
+        HASSAMS DİJİTAL SİSTEMLERİ // KURUCU ERİŞİMİ ONAYLANDI.
+    </div>
 
 </body>
 </html>
