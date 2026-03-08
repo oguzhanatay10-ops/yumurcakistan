@@ -3,185 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HASSAMS | Scorched Earth & Gotham</title>
+    <title>HASSAMS | Scorched Earth</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* ARK: SCORCHED EARTH & GOTHAM ATMOSFERİ */
+        /* SCORCHED EARTH ATMOSFERİ */
         body {
-            background: #1a0a00; /* Koyu toprak tonu */
-            color: #ffcc00; /* Kum sarısı yazı rengi */
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #1a0f00; /* Çöl Kahverengisi */
+            color: #ffcc00;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 0;
-            /* Arka plan kum fırtınası efekti */
-            background-image: linear-gradient(rgba(26, 10, 0, 0.8), rgba(26, 10, 0, 0.8)), 
-                              url('https://www.transparenttextures.com/patterns/sandpaper.png');
+            overflow-x: hidden;
         }
 
-        /* Isı Dalgası Efekti */
-        .heat-wave {
-            background: linear-gradient(180deg, #ff8c00 0%, #ff4500 50%, #000 100%);
-            padding: 100px 20px;
+        /* DEVASA GÜNEŞ VE BAŞLIK ALANI */
+        .scortched-header {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), 
+                        url('https://www.transparenttextures.com/patterns/sandpaper.png');
+            background-color: #ff8c00;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            border-bottom: 10px solid #553300;
-            position: relative;
-            overflow: hidden;
+            border-bottom: 10px solid #331a00;
+            box-shadow: inset 0 0 150px #000;
         }
 
-        .heat-wave h1 {
-            font-size: 5rem;
-            margin: 0;
-            color: #fff;
-            text-shadow: 0 0 30px #ff8c00, 5px 5px #000;
-            letter-spacing: 20px;
+        .scortched-header h1 {
+            font-size: clamp(4rem, 10vw, 8rem);
             font-weight: 900;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: -50px auto 50px;
-            padding: 20px;
-        }
-
-        /* ARK Tarzı Bilgi Kutuları */
-        .ark-card {
-            background: rgba(40, 20, 0, 0.9);
-            border: 2px solid #ff8c00;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 10px 10px 0px #331a00;
-            position: relative;
-        }
-
-        .ark-card h2 {
-            color: #ff8c00;
-            border-bottom: 2px solid #ff8c00;
-            padding-bottom: 10px;
+            color: #fff;
+            text-shadow: 10px 10px 0px #331a00;
+            letter-spacing: 20px;
+            margin: 0;
             text-transform: uppercase;
         }
 
-        /* Karakter ve Canlı Listesi */
-        .entry {
-            background: rgba(0,0,0,0.5);
-            border-left: 5px solid #ff4500;
-            padding: 15px;
-            margin-top: 15px;
-        }
-
-        .entry-title {
+        .scortched-header p {
+            font-size: 1.5rem;
+            color: #331a00;
             font-weight: bold;
+            letter-spacing: 4px;
+            margin-top: 10px;
+        }
+
+        /* AKICI BİLGİ METNİ - KUTUSUZ TASARIM */
+        .story-section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 30px;
+            line-height: 2.2;
+            font-size: 1.25rem;
+            color: #ffe066;
+            text-align: center;
+        }
+
+        .story-section strong {
             color: #fff;
-            display: block;
-            margin-bottom: 5px;
+            border-bottom: 2px solid #ff4500;
         }
 
-        /* Navigasyon */
-        .nav-bar {
+        /* DİNOZOR VE KARAKTER GRİDİ (ALT BÖLÜM) */
+        .fauna-grid {
             background: #000;
-            padding: 15px;
-            text-align: left;
-            border-bottom: 2px solid #ff8c00;
+            padding: 100px 0;
+            border-top: 4px solid #ff4500;
         }
 
-        .nav-bar a {
-            color: #ff8c00;
+        .dino-card {
+            background: #111;
+            border: 1px solid #333;
+            padding: 30px;
+            transition: 0.4s;
+            height: 100%;
+            border-bottom: 5px solid #ff4500;
+        }
+
+        .dino-card:hover {
+            transform: scale(1.05);
+            background: #1a1a1a;
+            border-color: #ff8c00;
+        }
+
+        .category-tag {
+            color: #ff4500;
+            font-weight: bold;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        /* Badge Efektleri */
-        .danger-level {
-            float: right;
-            background: #ff0000;
-            color: #fff;
-            padding: 2px 8px;
-            font-size: 0.7rem;
+            background: rgba(0,0,0,0.5);
+            padding: 10px 20px;
+            border: 1px solid #ff8c00;
         }
     </style>
 </head>
 <body>
 
-    <div class="nav-bar">
-        <a href="index.html">⬅ ANA ÜSSE (BİRLİĞE) DÖNÜŞ</a>
-    </div>
-
-    <div class="heat-wave">
+    <header class="scortched-header">
+        <a href="index.html" class="nav-btn">⬅ ANA KARARGAHA DÖN</a>
         <h1>HASSAMS</h1>
-        <p style="color: #fff; letter-spacing: 5px; font-weight: bold;">SCORCHED GOTHAM // KAVURUCU KARANLIK</p>
-        <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); color: #ffcc00; font-size: 0.8rem; background: rgba(0,0,0,0.5); padding: 5px;">
-            DURUM: EXTREME HEAT // SU SEVİYESİ: KRİTİK
-        </div>
-    </div>
+        <p>GOTHAM'IN GÖLGESİNDE KAVURUCU BİR DİYAR</p>
+    </header>
 
-    <div class="container">
-        
-        <div class="ark-card" style="border-color: #fff;">
-            <h2>👤 MR. ERTUĞRUL (KUMUN CELLADI)</h2>
-            <p>
-                Hassams'ın kavurucu güneşinin altında, siyah pelerini kum fırtınalarıyla savrulan tek figür. <strong>Mr. Ertuğrul</strong>, Scorched Earth'ün vahşi yaşamını dize getirmiş, Gotham'ın adaletini bu çatlamış topraklara kazımıştır. Elindeki devasa kılıç, güneş ışığını emerek zifiri bir karanlık yayar.
-            </p>
-            <div class="entry">
-                <span class="entry-title">🛡️ ÖZEL YETENEK: KUMUN SESSİZLİĞİ</span>
-                Fırtına çıktığında Mr. Ertuğrul tamamen görünmez olur ve düşmanlarını daha ne olduğunu anlamadan saf dışı bırakır.
-            </div>
-        </div>
+    <main class="story-section">
+        <p>
+            Hassams Kıtası, <strong>ARK: Scorched Earth</strong>'ün vahşi doğası ile <strong>Gotham</strong>'ın karanlık mimarisinin çarpıştığı noktadır. 
+            Burada sarı kumlar sadece susuzluğu değil, yaklaşan bir ölümü de temsil eder. Dev binaların yıkıntıları kum tepelerinin arasından birer mezar taşı gibi yükselir. 
+            Gündüzleri ısı dalgaları gerçekliği bükerken, geceleri <strong>Mr. Ertuğrul</strong>'un adaleti rüzgarla birlikte fısıldar. 
+            Su, buradaki tek gerçek hazinedir ve her damlası kanla kazanılır. Dinozorlar burada sadece hayvan değil, genetik olarak modifiye edilmiş savaş makineleridir.
+        </p>
+    </main>
 
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-            
-            <div class="ark-card" style="flex: 1; min-width: 300px;">
-                <h2>🦖 VAHŞİ FAUNA (SCORCHED)</h2>
+    <section class="fauna-grid">
+        <div class="container">
+            <h2 class="text-center mb-5" style="letter-spacing: 12px; color: #ff8c00;">DİJİTAL KAYITLAR</h2>
+            <div class="row g-4">
                 
-                <div class="entry">
-                    <span class="danger-level">ALPHA</span>
-                    <span class="entry-title">SAND-REX</span>
-                    Kumun içinden fırlayan, derisi kaya gibi sertleşmiş devasa bir avcı. Gözleri ısıya duyarlıdır.
+                <div class="col-md-4">
+                    <div class="dino-card">
+                        <span class="category-tag">🦇 KORUYUCU</span>
+                        <h3>MR. ERTUĞRUL</h3>
+                        <p class="small text-muted">Gece Celladı. Kum fırtınalarını pelerin olarak kullanan, kılıcıyla adaleti kumun üzerine kazıyan tek lider.</p>
+                    </div>
                 </div>
 
-                <div class="entry">
-                    <span class="danger-level">FLYER</span>
-                    <span class="entry-title">GOTHAM WYVERN</span>
-                    Ağzından ateş yerine yoğun bir karanlık (Void) püskürten, yarasa kanatlı devasa uçan sürüngenler.
+                <div class="col-md-4">
+                    <div class="dino-card">
+                        <span class="category-tag">🦖 ALPHA APEX</span>
+                        <h3>SAND-REX</h3>
+                        <p class="small text-muted">Scorched Earth'ün mutlak hakimi. Titreşimleri kilometrelerce öteden hisseden, kumun altındaki ölüm.</p>
+                    </div>
                 </div>
 
-                <div class="entry">
-                    <span class="danger-level">SWARM</span>
-                    <span class="entry-title">OBSIDIAN MANTA</span>
-                    Kum denizinde yüzen, zehirli kuyrukları olan metalik deri kaplı yaratıklar.
+                <div class="col-md-4">
+                    <div class="dino-card">
+                        <span class="category-tag">🐉 FLYER</span>
+                        <h3>GOTHAM WYVERN</h3>
+                        <p class="small text-muted">Ağzından karanlık alevler kusan, devasa kanatlarıyla kum fırtınaları yaratan efsanevi canlı.</p>
+                    </div>
                 </div>
+
+                <div class="col-md-4">
+                    <div class="dino-card" style="border-bottom-color: #6f42c1;">
+                        <span class="category-tag">🧪 BİYO-TEHLİKE</span>
+                        <h3>DR. TOXIN</h3>
+                        <p class="small text-muted">Vahşi dinozorları evcilleştiren ve onları birer kimyasal silaha dönüştüren dahi suç baronu.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dino-card" style="border-bottom-color: #6f42c1;">
+                        <span class="category-tag">🎭 ZİHİN MİMARI</span>
+                        <h3>KUKLACI</h3>
+                        <p class="small text-muted">Arena dövüşçülerinin anılarını çalan ve onları zifiri karanlıkta yöneten gizemli figür.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dino-card" style="border-bottom-color: #ff0000; background: #200;">
+                        <span class="category-tag">🏟️ ETKİNLİK</span>
+                        <h3>BÜYÜK ARENA</h3>
+                        <p class="small text-muted">Hassams'ın kalbinde, kum ve kanın birbirine karıştığı, sadece en güçlülerin sağ çıktığı yer.</p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="ark-card" style="flex: 1; min-width: 300px;">
-                <h2>👥 GÖLGE KONSEYİ (SUÇ LORDLARI)</h2>
-                
-                <div class="entry">
-                    <span class="entry-title">🎭 KUKLACI</span>
-                    Arenada ölenlerin ruhlarını kum kristallerine hapseden, telepatik bir canavar.
-                </div>
-
-                <div class="entry">
-                    <span class="entry-title">🧪 DR. TOXIN</span>
-                    Su kuyularını zehirleyerek şehri kendine muhtaç bırakan, çölün en zeki simyacısı.
-                </div>
-
-                <div class="entry">
-                    <span class="entry-title">🦅 BURAKHINHO (ARENA HAKİMİ)</span>
-                    Grand Arena'nın mutlak sahibi. Kanunları o koyar, cezayı Mr. Ertuğrul keser.
-                </div>
-            </div>
-
         </div>
+    </section>
 
-        <div class="ark-card" style="text-align: center; background: #330000; border: 4px solid #ff0000;">
-            <h1 style="color: #ff0000; font-size: 3rem;">THE GRAND ARENA</h1>
-            <p>"SADECE GÜÇLÜ OLANLARIN SU İÇMEYE HAKKI VARDIR."</p>
-            
-        </div>
-
-    </div>
-
-    <div style="text-align: center; padding: 40px; color: #553300; font-weight: bold;">
-        HASSAMS // ARK: GOTHAM PROTOCOL v1.0
-    </div>
+    <footer class="text-center py-5" style="background: #000; color: #444; font-size: 0.8rem;">
+        HASSAMS PROTOCOL // 2026 // ADALET KUMUN ALTINDADIR.
+    </footer>
 
 </body>
 </html>
